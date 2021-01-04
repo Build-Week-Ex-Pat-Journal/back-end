@@ -26,7 +26,7 @@ function deletePost(id){
 
 function getUserPost(id){
     return db('posts as p')
-    .join('users as u', "u.id", '=', 'p.user_id')
+    .join('users as u', "u.username", '=', 'p.user_id')
     .select('p.story', 'p.image')
     .where("p.user_id", id)
 }

@@ -11,12 +11,12 @@ exports.up = function(knex) {
     tbl.string('story', 500)
     tbl.binary('image')
     tbl
-    .integer("user_id")
+    .string("user_id")
     .unsigned()
     .notNullable()
-    .references('id')
+    .references('username')
     .inTable('users')
-    .onDelete('CASCADE')
+    .onDelete('RESTRICT')
     .onUpdate("CASCADE")
   })
 };
