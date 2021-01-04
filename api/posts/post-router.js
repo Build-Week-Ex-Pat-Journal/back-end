@@ -51,7 +51,7 @@ router.delete('/:id', restrict, async (req, res) => {
         res.status(500).json({ message: error.message })
     }
 })
-router.get('/posts/:id', restrict, (req, res) => {
+router.get('/:id', restrict, (req, res) => {
     const {id} = req.params
 
     Post.findById(id)
