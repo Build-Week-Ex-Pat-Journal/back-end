@@ -11,5 +11,5 @@ server.get("/", (req, res) => {
     res.json({api:"up"})
 })
 server.use('/api', authRouter)
-server.use('/api/posts', postRouter)
+server.use('/posts', postRouter)
 module.exports = server
