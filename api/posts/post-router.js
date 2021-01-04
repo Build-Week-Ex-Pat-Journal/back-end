@@ -51,10 +51,10 @@ router.delete('/:id', restrict, async (req, res) => {
         res.status(500).json({ message: error.message })
     }
 })
-router.get('/:id/posts', restrict, (req, res) => {
+router.get('/posts/:id', restrict, (req, res) => {
     const {id} = req.params
 
-    Post.getUserPost(id)
+    Post.findById(id)
     .then(post => {
         res.status(200).json(post)
     })
