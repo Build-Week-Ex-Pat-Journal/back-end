@@ -8,8 +8,8 @@ exports.seed = function(knex) {
         {id: 1, username: 'Josh', password: 'test12345'},
         {id: 2, username: 'Mike', password: 'test12345'},
         {id: 3, username: 'William', password: 'test12345'},
-        {id: 3, username: 'Marcos', password: 'test12345'},
-        {id: 3, username: 'Patrick', password: 'test12345'}
+        {id: 4, username: 'Marcos', password: 'test12345'},
+        {id: 5, username: 'Patrick', password: 'test12345'}
       ]);
     });
 };
